@@ -1,7 +1,7 @@
 (function(app) {
     'use strict';
 
-    var MapCtrl = function(MapFactory, MedicalUnits) {
+    var MapCtrl = function($scope, MapFactory, MedicalUnits) {
         MapFactory.renderMap();
 
         MedicalUnits.getPharmacies()
@@ -10,7 +10,7 @@
             })
             .error(function() {
                 console.log("Farmaciile nu au putut fi citite");
-            })
+            });
 
         MedicalUnits.getHospitals()
             .success(function(data) {
@@ -18,7 +18,11 @@
             })
             .error(function() {
                 console.log("Farmaciile nu au putut fi citite");
-            })
+            });
+
+        $scope.showHospital = function(ID) {
+            console.log(ID);
+        }
     };
 
     app.controller("MapCtrl", MapCtrl)

@@ -4,6 +4,10 @@
 
     var MapFactory = function() {
         var _service = {
+            //
+            // Borrowed from:
+            // http://mapicons.nicolasmollet.com/
+            //
             icons: {
                 pharmacy: 'styles/images/pharmacy.png',
                 hospital: 'styles/images/hospital.png'
@@ -25,7 +29,6 @@
                         src: this.icons[type]
                     })
                 });
-
                 return iconStyle;
             }
         };
@@ -70,12 +73,26 @@
 
                         popup.setPosition(coord);
 
+                        var content = "none";
+
+                        if (feature.get('properties')["type"] === "pharmacy") {
+                            content = "<b>" + feature.get('properties')["name"] +
+                            "</b></br>Farmacist Sef: " + feature.get('properties')["headPharmacist"]
+                        }
+                        else if (feature.get('properties')["type"] === "hospital") {
+
+                            content = '<div class="map-popup"><img src="styles/images/hospitals/' + feature.get('properties')["Picture"] + '" alt=""/>' +
+                                "<b>" + feature.get('properties')["name"] +
+                                "</b></br>" + feature.get('properties')["Address"] +"" +
+                                '<button class="btn btn-primary" ng-click="showHospital(' + feature.get('properties')["ID"] + ')">Informații</button>' +
+                            '</div>'
+
+                        }
+
                         $(element).popover({
                             'placement': 'top',
                             'html': true,
-                            'content': "<b>" + feature.get('properties')["name"] +
-                            "</b></br>Farmacist Sef: " + feature.get('properties')["headPharmacist"]
-
+                            'content': content
                         });
                         $(element).popover('show');
                     } else {
@@ -103,6 +120,7 @@
                 for (var i = 0 ; i < pharmacies.length; i++) {
                     iconFeature = _service.getIcon(
                         pharmacies[i].Coordinates, {
+                            type: "pharmacy",
                             name: pharmacies[i].Name,
                             headPharmacist: pharmacies[i].HeadPharmacist
                         });
@@ -126,8 +144,12 @@
                 for (var i = 0 ; i < hospitals.length; i++) {
                     iconFeature = _service.getIcon(
                         hospitals[i].Coordinates, {
+                            type: "hospital",
+                            ID: hospitals[i].ID,
+                            Picture: hospitals[i].Picture,
+                            Address: hospitals[i].Address,
                             name: hospitals[i].Name,
-                            headPharmacist: hospitals[i].HeadPharmacist
+                            beds: hospitals[i].Beds
                         });
                     iconFeatures.push(iconFeature);
                 }

@@ -1,13 +1,77 @@
-[{
-  "ID": 1,
-  "Name": "U.SPIT.CLINIC JUD. DE URGENŢĂ BRAŞOV",
-  "Address": "BD.SATURN NR.38",
-  "HeadPharmacist": "BOIAN GEORGETA MINERVA",
-  "Coordinates": [25.62, 45.66]
-},{
-  "ID": 5,
-  "Name": "U.SPIT. CLINIC DE COPII BRAŞOV",
-  "Address": "STR. REPUBLICII,NR.18",
-  "HeadPharmacist": "HUTANU (COSMA) ANDREEA",
-  "Coordinates": [25.59, 45.64]
-}]
+[
+  {
+    "ID": "1",
+    "Name": "U.SPIT.CLINIC JUD. DE URGENŢĂ BRAŞOV",
+    "Address": "STR. CALEA BUCUREȘTI, NR. 25-27",
+    "Telephone": "0268/320022",
+    "Beds": "877",
+    "Equipment": "",
+    "Picture": "1.jpg",
+    "Doctors": "188",
+    "Web": "http://www.hospbv.ro/Home/tabid/54/Default.aspx",
+    "Coordinates": [
+      25.620250,
+      45.648088
+    ]
+  },
+  {
+    "ID": "2",
+    "Name": "U.SPIT.CLINIC OBSTETRICĂ-GINECOLOGIE Dr.IOAN AUREL SBÂRCEA- BRAŞOV",
+    "Address": "STR. GHEORGHE BARIȚIU NR. 36",
+    "Telephone": "0368/202012",
+    "Beds": "305",
+    "Equipment": "",
+    "Picture": "2.jpg",
+    "Doctors": "39",
+    "Web": "http://www.maternitatea.ro/index.html",
+    "Coordinates": [25.585567, 45.640533]
+  },
+  {
+    "ID": "3",
+    "Name": "U.SPIT. CLINIC DE COPII BRAŞOV",
+    "Address": "STR. NICOPOLE, NR. 45",
+    "Telephone": "0268/415130",
+    "Beds": "230",
+    "Equipment": "",
+    "Picture": "3.jpg",
+    "Doctors": "44",
+    "Web": "http://www.spitalcopiibrasov.ro/",
+    "Coordinates": [25.587914, 45.656570]
+  },
+  {
+    "ID": "4",
+    "Name": "U.SPIT.DE PSIHIATRIE ŞI NEUROLOGIE BRAŞOV",
+    "Address": "STR. PRUNDULUI, NR. 7-9",
+    "Telephone": "0268/511481",
+    "Beds": "330",
+    "Equipment": "",
+    "Picture": "4.jpg",
+    "Doctors": "34",
+    "Web": "http://www.spnbrasov.ro/",
+    "Coordinates": [25.584681, 45.638085]
+  },
+  {
+    "ID": "5",
+    "Name": "U.SPIT.DE BOLI INFECŢIOASE BRAŞOV",
+    "Address": "STR. MIHAI VITEAZU, NR. 9",
+    "Telephone": "0268/422477",
+    "Beds": "107",
+    "Equipment": "",
+    "Picture": "5.jpg",
+    "Doctors": "12",
+    "Web": "http://www.sbibrasov.ro",
+    "Coordinates": [25.597514, 45.656746]
+  },
+  {
+    "ID": "6",
+    "Name": "U.SPIT.PNEUMOFTIZIOLOGIE BRAŞOV",
+    "Address": "ALEEA DEALUL SPIRII, NR. 12",
+    "Telephone": "0268/477263",
+    "Beds": "150",
+    "Equipment": "",
+    "Picture": "",
+    "Doctors": "17",
+    "Web": "http://pneumologie.ro/Home.php",
+    "Coordinates": [25.573740, 45.642987]
+  }
+]
