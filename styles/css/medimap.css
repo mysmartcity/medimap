@@ -1,0 +1,12 @@
+#map-container {
+    position: absolute;
+    left: 10px;
+    right:10px;
+    top: 60px;
+    bottom: 10px;
+    border: 1px solid #ccc;
+}
+.map {
+    height: 100%;
+    width: 100%;
+}

@@ -5,5 +5,10 @@
   "authors": [
     "Petru Ișfan"
   ],
-  "license": "Apache2"
+  "license": "Apache2",
+  "dependencies": {
+    "bootstrap": "~3.3.1",
+    "angular": "~1.3.6",
+    "angular-route": "~1.3.6"
+  }
 }
