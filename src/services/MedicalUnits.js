@@ -6,6 +6,9 @@
         return {
             getPharmacies: function() {
                 return $http.get("/api/pharmacies/town/brasov.json");
+            },
+            getHospitals: function() {
+                return $http.get("/api/hospitals/town/brasov.json");
             }
         }
     };

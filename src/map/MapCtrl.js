@@ -6,7 +6,15 @@
 
         MedicalUnits.getPharmacies()
             .success(function(data) {
-                console.log(data);
+                MapFactory.addPharmacies(data);
+            })
+            .error(function() {
+                console.log("Farmaciile nu au putut fi citite");
+            })
+
+        MedicalUnits.getHospitals()
+            .success(function(data) {
+                MapFactory.addHospitals(data);
             })
             .error(function() {
                 console.log("Farmaciile nu au putut fi citite");
