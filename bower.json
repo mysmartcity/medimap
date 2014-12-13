@@ -1,0 +1,9 @@
+{
+  "name": "medimap",
+  "version": "0.0.1",
+  "description": "Medical map Romania",
+  "authors": [
+    "Petru Ișfan"
+  ],
+  "license": "Apache2"
+}
