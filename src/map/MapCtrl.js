@@ -7,6 +7,7 @@
         MedicalUnits.getPharmacies()
             .success(function(data) {
                 MapFactory.addPharmacies(data);
+                $scope.pharmacies = data;
             })
             .error(function() {
                 console.log("Farmaciile nu au putut fi citite");
@@ -15,14 +16,39 @@
         MedicalUnits.getHospitals()
             .success(function(data) {
                 MapFactory.addHospitals(data);
+                $scope.hospitals = data;
             })
             .error(function() {
                 console.log("Farmaciile nu au putut fi citite");
             });
 
-        $scope.showHospital = function(ID) {
-            console.log(ID);
-        }
+        // TODO: this is a hack. Use scope instead
+        window.showHospital = function(ID) {
+            for ( var i = 0 ; i < $scope.hospitals.length; i++ ) {
+                if ($scope.hospitals[i].ID == ID ) {
+                    $scope.hospital = $scope.hospitals[i];
+                    $scope.$apply();
+
+                    $("#hospitalInfo").modal("show");
+
+                    break;
+                }
+            }
+        };
+        window.showPharmacy = function(ID) {
+            for ( var i = 0 ; i < $scope.pharmacies.length; i++ ) {
+                if ($scope.pharmacies[i].ID == ID ) {
+                    console.log($scope.pharmacies[i]);
+
+                    $scope.pharmacy = $scope.pharmacies[i];
+                    $scope.$apply();
+
+                    $("#pharmacyInfo").modal("show");
+
+                    break;
+                }
+            }
+        };
     };
 
     app.controller("MapCtrl", MapCtrl)

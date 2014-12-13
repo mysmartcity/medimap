@@ -1,3 +1,42 @@
 <div id="map" class="map">
     <div id="popup"></div>
 </div>
+
+<div id="hospitalInfo" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" style="background: #337ab7">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">{{ hospital.Name }}</h4>
+            </div>
+            <div class="modal-body">
+                <img ng-src="styles/images/hospitals/{{ hospital.Picture }}" alt=""/>
+                <p><b>Adresa: </b>{{ hospital.Address }}</p>
+                <p><b>Telefon: </b>{{ hospital.Telephone }}</p>
+                <p><b>Web: </b>{{ hospital.Web }}</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="pharmacyInfo" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" style="background: #337ab7">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">{{ pharmacy.Name }}</h4>
+            </div>
+            <div class="modal-body">
+                <!--<img ng-src="styles/images/hospitals/{{ hospital.Picture }}" alt=""/>-->
+                <p><b>Adresa: </b>{{ pharmacy.Address }}</p>
+                <p><b>Farmacist Șef: </b>{{ pharmacy.HeadPharmacist }}</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

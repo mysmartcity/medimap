@@ -76,15 +76,17 @@
                         var content = "none";
 
                         if (feature.get('properties')["type"] === "pharmacy") {
-                            content = "<b>" + feature.get('properties')["name"] +
-                            "</b></br>Farmacist Sef: " + feature.get('properties')["headPharmacist"]
+                            content = '<div class="map-popup"><b>' + feature.get('properties')["name"] +
+                                "</b></br>Farmacist Sef: " + feature.get('properties')["headPharmacist"] +
+                                '<button class="btn btn-primary" onclick="showPharmacy(' + feature.get('properties')["ID"] + ')">Informații</button>' +
+                            '</div>'
                         }
                         else if (feature.get('properties')["type"] === "hospital") {
 
                             content = '<div class="map-popup"><img src="styles/images/hospitals/' + feature.get('properties')["Picture"] + '" alt=""/>' +
                                 "<b>" + feature.get('properties')["name"] +
-                                "</b></br>" + feature.get('properties')["Address"] +"" +
-                                '<button class="btn btn-primary" ng-click="showHospital(' + feature.get('properties')["ID"] + ')">Informații</button>' +
+                                "</b></br>" + feature.get('properties')["Address"] + "<br/>" +
+                                '<button class="btn btn-primary" onclick="showHospital(' + feature.get('properties')["ID"] + ')">Informații</button>' +
                             '</div>'
 
                         }
@@ -121,6 +123,7 @@
                     iconFeature = _service.getIcon(
                         pharmacies[i].Coordinates, {
                             type: "pharmacy",
+                            ID: pharmacies[i].ID,
                             name: pharmacies[i].Name,
                             headPharmacist: pharmacies[i].HeadPharmacist
                         });
