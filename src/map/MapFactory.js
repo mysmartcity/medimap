@@ -64,16 +64,20 @@
 
                 // display popup on click
                 map.on('click', function(evt) {
-                    var feature = map.forEachFeatureAtPixel(evt.pixel,
-                        function(feature) { return feature;});
+                    var feature = map.forEachFeatureAtPixel(evt.pixel, function(feature) {
+                        return feature;
+                    });
+
 
                     if (feature) {
+
                         var geometry = feature.getGeometry();
                         var coord = geometry.getCoordinates();
 
-                        popup.setPosition(coord);
 
                         var content = "none";
+
+                        console.log(feature.get('properties')["name"]);
 
                         if (feature.get('properties')["type"] === "pharmacy") {
                             content = '<div class="map-popup"><img src="styles/images/pharmacies/' + feature.get('properties')["Picture"] + '" alt=""/>' +'<b>' + feature.get('properties')["name"] +
@@ -90,13 +94,20 @@
                             '</div>'
 
                         }
+                        popup.setPosition(coord);
 
                         $(element).popover({
                             'placement': 'top',
                             'html': true,
                             'content': content
                         });
+
                         $(element).popover('show');
+                        //
+                        // Hack because content does not update
+                        //
+                        $(".popover-content").html(content);
+
                     } else {
                         $(element).popover('destroy');
                     }
