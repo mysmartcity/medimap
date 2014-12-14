@@ -10,7 +10,7 @@
                 $scope.pharmacies = data;
             })
             .error(function() {
-                console.log("Farmaciile nu au putut fi citite");
+                toastr.error("Farmaciile nu au putut fi citite");
             });
 
         MedicalUnits.getHospitals()
@@ -19,7 +19,7 @@
                 $scope.hospitals = data;
             })
             .error(function() {
-                console.log("Farmaciile nu au putut fi citite");
+                toastr.error("Lista spitalelor nu au putut fi citită");
             });
 
         // TODO: this is a hack. Use scope instead
