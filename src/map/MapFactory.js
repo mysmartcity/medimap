@@ -77,7 +77,7 @@
 
                         if (feature.get('properties')["type"] === "pharmacy") {
                             content = '<div class="map-popup"><b>' + feature.get('properties')["name"] +
-                                "</b></br>Farmacist Sef: " + feature.get('properties')["headPharmacist"] +
+                                "</b></br>" + feature.get('properties')["address"] +
                                 '<button class="btn btn-primary" onclick="showPharmacy(' + feature.get('properties')["ID"] + ')">Informații</button>' +
                             '</div>'
                         }
@@ -125,7 +125,7 @@
                             type: "pharmacy",
                             ID: pharmacies[i].ID,
                             name: pharmacies[i].Name,
-                            headPharmacist: pharmacies[i].HeadPharmacist
+                            address: pharmacies[i].Address
                         });
                     iconFeatures.push(iconFeature);
                 }
@@ -151,8 +151,7 @@
                             ID: hospitals[i].ID,
                             Picture: hospitals[i].Picture,
                             Address: hospitals[i].Address,
-                            name: hospitals[i].Name,
-                            beds: hospitals[i].Beds
+                            name: hospitals[i].Name
                         });
                     iconFeatures.push(iconFeature);
                 }

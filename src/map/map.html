@@ -2,7 +2,7 @@
     <div id="popup"></div>
 </div>
 
-<div id="hospitalInfo" class="modal fade">
+<div id="hospitalInfo" class="modal fade ">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header" style="background: #337ab7">
@@ -10,13 +10,51 @@
                 <h4 class="modal-title">{{ hospital.Name }}</h4>
             </div>
             <div class="modal-body">
-                <img ng-src="styles/images/hospitals/{{ hospital.Picture }}" alt=""/>
-                <p><b>Adresa: </b>{{ hospital.Address }}</p>
-                <p><b>Telefon: </b>{{ hospital.Telephone }}</p>
-                <p><b>Web: </b>{{ hospital.Web }}</p>
+                <img ng-src="styles/images/hospitals/{{ hospital.Picture }}" alt="" class="img-responsive"/>
+
+                <table class="unit-details">
+                    <tbody>
+                    <tr>
+                        <td><b>Adresa: </b></td>
+                        <td>{{ hospital.Address }}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Telefon: </b></td>
+                        <td>{{ hospital.Telephone }}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Web: </b></td>
+                        <td><a ng-href="{{ hospital.Web }}">{{ hospital.Web }}</a></td>
+                    </tr>
+                    <tr>
+                        <td><b>Paturi: </b></td>
+                        <td>{{ hospital.BedsTotal }}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Doctori: </b></td>
+                        <td>{{ hospital.DoctorsTotal }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Specializare</th>
+                        <th>Paturi</th>
+                        <th>Doctori</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="d in hospital.Details">
+                        <td>{{ d.Services }}</td>
+                        <td>{{ d.Doctors }}</td>
+                        <td>{{ d.Beds }}</td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Închide</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
@@ -31,8 +69,34 @@
             </div>
             <div class="modal-body">
                 <!--<img ng-src="styles/images/hospitals/{{ hospital.Picture }}" alt=""/>-->
-                <p><b>Adresa: </b>{{ pharmacy.Address }}</p>
-                <p><b>Farmacist Șef: </b>{{ pharmacy.HeadPharmacist }}</p>
+                <table class="unit-details">
+                    <tbody>
+                    <tr>
+                        <td><b>Adresa: </b></td>
+                        <td>{{ pharmacy.Address }}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Telefon: </b></td>
+                        <td>{{ pharmacy.Telephone }}</td>
+                    </tr>
+                    <!--<tr>-->
+                        <!--<td><b>Web: </b></td>-->
+                        <!--<td><a ng-href="{{ pharmacy.Web }}">{{ pharmacy.Web }}</a></td>-->
+                    <!--</tr>-->
+                    <tr>
+                        <td><b>Orar: </b></td>
+                        <td>{{ pharmacy.Schedule }}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Farmacist șef: </b></td>
+                        <td>{{ pharmacy.HeadPharmacist }}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Data înființării: </b></td>
+                        <td>{{ pharmacy.Date }}</td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

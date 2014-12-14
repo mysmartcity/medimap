@@ -35,11 +35,10 @@
                 }
             }
         };
+        // TODO: this is a hack. Use scope instead
         window.showPharmacy = function(ID) {
             for ( var i = 0 ; i < $scope.pharmacies.length; i++ ) {
                 if ($scope.pharmacies[i].ID == ID ) {
-                    console.log($scope.pharmacies[i]);
-
                     $scope.pharmacy = $scope.pharmacies[i];
                     $scope.$apply();
 

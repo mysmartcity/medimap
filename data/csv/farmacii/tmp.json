@@ -1,0 +1,19 @@
+[
+{"ID":"1","Name":"FARMACIA 230","Address":"BD.SATURN NR.38,","Telephone":"0268/331601","Schedule":"LUNI-VINERI 9-18","HeadPharmacist":"BOIAN GEORGETA MINERVA","Picture":"","Date":"04/08/1997","Authorization":"1","Town":"BRASOV","Coordinates":""}
+,
+{"ID":"5","Name":"HELP NET FARMA","Address":"STR. REPUBLICII,NR.18","Telephone":"0268/410361","Schedule":"LUNI-VINERI 9-18","HeadPharmacist":"HUTANU (COSMA) ANDREEA","Picture":"","Date":"10/14/1992","Authorization":"1073","Town":"BRASOV","Coordinates":"[45.642665, 25.591599]"}
+,
+{"ID":"6","Name":"REMEDIA","Address":"INCINTA GARII CALATORI BRASOV","Telephone":"0268/422120","Schedule":"LUNI-VINERI 7-20, SÂMBĂTĂ-DUMINICĂ 7-14:30","HeadPharmacist":"FULEA CLAUDIA","Picture":"","Date":"10/19/1992","Authorization":"1104","Town":"BRASOV","Coordinates":"[45.661427, 25.613735]"}
+,
+{"ID":"13","Name":"FARMINA","Address":"PIATA SFATULUI,NR.26","Telephone":"0268/477899","Schedule":"LUNI-VINERI 8-20, SÂMBĂTĂ 8-14","HeadPharmacist":"MUTU VALENTINA","Picture":"","Date":"02/03/1994","Authorization":"1800","Town":"BRASOV","Coordinates":"[45.641808, 25.589668]"}
+,
+{"ID":"14","Name":"HELP NET FARMA","Address":"STR. CARPENULUI,NR.1,BL.A3","Telephone":"","Schedule":"LUNI-VINERI 9-18","HeadPharmacist":"CRISTIADES AIDA MIHAELA","Picture":"","Date":"3/28/1994","Authorization":"1851","Town":"BRASOV","Coordinates":"[45.636302, 25.610161]"}
+,
+{"ID":"15","Name":"TRIAJ","Address":"STR. HARMANULUI,NR.67","Telephone":"0268/334625","Schedule":"","HeadPharmacist":"GOLOGAN MARIA","Picture":"","Date":"5/18/1994","Authorization":"1921","Town":"BRASOV","Coordinates":"[45.675835, 25.647048]"}
+,
+{"ID":"16","Name":"FARMACIA NR 37","Address":"STR. AVRAM IANCU,NR.74","Telephone":"0268/421842","Schedule":"","HeadPharmacist":"NOVAC BACIU BIANCA MIHAELA","Picture":"","Date":"04/08/1997","Authorization":"2","Town":"BRASOV","Coordinates":"[45.658486, 25.586986]"}
+,
+{"ID":"17","Name":"FARMACIE","Address":"BD. 15 NOIEMBRIE,NR.33","Telephone":"","Schedule":"LUNI-VINERI 9-18","HeadPharmacist":"BARBAT MARIA CRISTINA","Picture":"","Date":"11/28/1994","Authorization":"2060","Town":"BRASOV","Coordinates":"[45.648007, 25.603670]"}
+,
+{"ID":"18","Name":"FARMACIA 90","Address":"BD.15 NOIEMBRIE,32","Telephone":"","Schedule":"LUNI-VINERI 9-18","HeadPharmacist":"TASCAU V. FLORENTINA","Picture":"","Date":"12/14/1994","Authorization":"2074","Town":"BRASOV","Coordinates":"[45.646714, 25.601417]"}
+]

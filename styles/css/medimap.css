@@ -10,13 +10,16 @@
     height: 100%;
     width: 100%;
 }
-
-/*.map-popup {*/
-    /*width: 300px;*/
-    /*height: 400px;*/
-/*}*/
-
 .map-popup img {
     width: 200px;
     height: 150px;
+}
+.unit-details {
+    margin: 10px;
+}
+.unit-details tr td:nth-child(1){
+    text-align: right;
+}
+.unit-details tr td:nth-child(2){
+    padding-left: 20px;
 }
