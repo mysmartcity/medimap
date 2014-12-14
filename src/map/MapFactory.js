@@ -76,9 +76,9 @@
                         var content = "none";
 
                         if (feature.get('properties')["type"] === "pharmacy") {
-                            content = '<div class="map-popup"><b>' + feature.get('properties')["name"] +
+                            content = '<div class="map-popup"><img src="styles/images/pharmacies/' + feature.get('properties')["Picture"] + '" alt=""/>' +'<b>' + feature.get('properties')["name"] +
                                 "</b></br>" + feature.get('properties')["address"] +
-                                '<button class="btn btn-primary" onclick="showPharmacy(' + feature.get('properties')["ID"] + ')">Informații</button>' +
+                                '</br><button class="btn btn-primary" onclick="showPharmacy(' + feature.get('properties')["ID"] + ')">Informații</button>' +
                             '</div>'
                         }
                         else if (feature.get('properties')["type"] === "hospital") {
@@ -125,7 +125,8 @@
                             type: "pharmacy",
                             ID: pharmacies[i].ID,
                             name: pharmacies[i].Name,
-                            address: pharmacies[i].Address
+                            address: pharmacies[i].Address,
+                            Picture: pharmacies[i].Picture
                         });
                     iconFeatures.push(iconFeature);
                 }

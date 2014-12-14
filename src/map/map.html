@@ -24,7 +24,7 @@
                     </tr>
                     <tr>
                         <td><b>Web: </b></td>
-                        <td><a ng-href="{{ hospital.Web }}">{{ hospital.Web }}</a></td>
+                        <td><a ng-href="{{ hospital.Web }}" target="_blank">{{ hospital.Web }}</a></td>
                     </tr>
                     <tr>
                         <td><b>Paturi: </b></td>
@@ -60,7 +60,7 @@
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-<div id="pharmacyInfo" class="modal fade">
+<div id="pharmacyInfo" class="modal fade" tabindex="-1">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header" style="background: #337ab7">
@@ -68,7 +68,7 @@
                 <h4 class="modal-title">{{ pharmacy.Name }}</h4>
             </div>
             <div class="modal-body">
-                <!--<img ng-src="styles/images/hospitals/{{ hospital.Picture }}" alt=""/>-->
+                <img ng-src="styles/images/pharmacies/{{ pharmacy.Picture }}" alt=""/>
                 <table class="unit-details">
                     <tbody>
                     <tr>
